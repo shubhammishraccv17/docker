@@ -1,0 +1,29 @@
+After installation we try to run our first command 
+i.e
+docker run hello-world 
+when we run this command first time we will get the message didnt get hello world locally then it will connect to docker hub then download file from there then execute that file 
+this all will happen automatically we have to do nothing after putting the command
+
+explanation of above scenerio in brief 
+
+when we run this command first time  ""docker run hello-world""
+actually we called the docker client installed in our system and assign it a job so docker client goes to docker server and asked it that hey do u have image name "hello-world"
+so docker server first check on your local system then say no i dont have but i can download it from docker hub 
+then it install this into cache of your local machine 
+
+so when you run this command second time it wont say it is not present locally.
+
+
+what is docker hub?
+ it is a repository of free  public images so we can download and run.
+
+ what is container?
+ a process or set of process that have grouping of resources specifically assigned to it.
+
+ what is an image ?
+  all the configuratin and dependencies to run a very specific program
+
+
+
+  how docker runs on windows and mac os?
+    as we know in windows and mac os there is no feature called name spacing and control groups . these features are  associated with linux only so docker create a virtual layer of linux between these os and then run on that virtual linux os layer.
