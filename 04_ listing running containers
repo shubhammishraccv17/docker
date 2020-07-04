@@ -1,0 +1,51 @@
+docker ps
+this command  will list all the running containers 
+
+Scenerio one 
+hkeeper@hkeeper-swan:~$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ in this scenerio we dont have any running container 
+ so its blank. it just have some headers on the table .
+ 
+ 
+ 
+ 
+ now we  will execute some that runs for long time  then see  the scenerio two
+ scenerio two 
+ 
+ From terminal one -
+ hkeeper@hkeeper-swan:~$ sudo docker run busybox ping facebook.com
+PING facebook.com (157.240.198.35): 56 data bytes
+64 bytes from 157.240.198.35: seq=0 ttl=56 time=165.099 ms
+64 bytes from 157.240.198.35: seq=1 ttl=56 time=27.425 ms
+64 bytes from 157.240.198.35: seq=2 ttl=56 time=218.882 ms
+64 bytes from 157.240.198.35: seq=3 ttl=56 time=73.926 ms
+64 bytes from 157.240.198.35: seq=4 ttl=56 time=32.983 ms
+64 bytes from 157.240.198.35: seq=5 ttl=56 time=40.594 ms
+64 bytes from 157.240.198.35: seq=6 ttl=56 time=108.538 ms
+64 bytes from 157.240.198.35: seq=7 ttl=56 time=151.879 ms
+64 bytes from 157.240.198.35: seq=8 ttl=56 time=186.182 ms
+  
+  
+ then we use docker ps in another terminal 
+ 
+ 
+ hkeeper@hkeeper-swan:~$ sudo docker ps
+[sudo] password for hkeeper: 
+CONTAINER ID        IMAGE               COMMAND               CREATED             STATUS              PORTS               NAMES
+57c469f6a7bd        busybox             "ping facebook.com"   37 seconds ago      Up 30 seconds                           vigorous_lichterman
+hkeeper@hkeeper-swan:~$ 
+
+
+to
+see all the containers ever runned on our machine  
+
+hkeeper@hkeeper-swan:~$ sudo docker ps --all
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+57c469f6a7bd        busybox             "ping facebook.com"      15 minutes ago      Exited (0) 14 minutes ago                       vigorous_lichterman
+fae784e475e2        hello-world         "ls"                     30 minutes ago      Created                                         sad_babbage
+ba38aa1656fe        busybox             "ls"                     33 minutes ago      Exited (0) 33 minutes ago                       busy_galois
+bf659d13e97b        busybox             "echo 'hi i am shubh…"   34 minutes ago      Exited (0) 34 minutes ago                       great_lamport
+1865fdc84758        busybox             "echo 'hi i am shubh…"   35 minutes ago      Created                                         jolly_chebyshev
+2e5ddb1c63b4        hello-world         "/hello"                 43 minutes ago      Exited (0) 43 minutes ago                       suspicious_wilbur
+hkeeper@hkeeper-swan:~$ 
