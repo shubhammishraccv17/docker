@@ -1,1 +1,8 @@
+when a container is stopeed automatically or intentially we can use 
+
+docker start <container id > 
+to restart it 
+
+to see the id we can use 
+docker ps --all
 
