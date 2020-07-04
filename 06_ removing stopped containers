@@ -1,0 +1,46 @@
+when we put commands like 
+docker run busybox ping google.com it is forever command it is never going untill it is been requested to stop 
+
+
+so there are two ways to stop a container 
+first one 
+
+docker stop <container id > 
+
+
+docker kill <container id > 
+
+
+difference between docker stop command  and docker kill command
+  while using stop container can take its own time to stop 
+  
+  
+  but kill commands ask for a force shut down 
+  
+  
+  sudo docker create  busybox ping google.com 
+0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+
+hkeeper@hkeeper-swan:~$ sudo docker start 0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+
+sudo docker logs  0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+PING google.com (172.217.160.238): 56 data bytes
+64 bytes from 172.217.160.238: seq=0 ttl=116 time=187.241 ms
+64 bytes from 172.217.160.238: seq=1 ttl=116 time=50.791 ms
+64 bytes from 172.217.160.238: seq=2 ttl=116 time=430.366 ms
+64 bytes from 172.217.160.238: seq=3 ttl=116 time=128.747 ms
+64 bytes from 172.217.160.238: seq=4 ttl=116 time=22.471 ms
+64 bytes from 172.217.160.238: seq=5 ttl=116 time=20.330 ms
+64 bytes from 172.217.160.238: seq=6 ttl=116 time=98.193 ms
+64 bytes from 172.217.160.238: seq=7 ttl=116 time=217.804 ms
+64 bytes from 172.217.160.238: seq=8 ttl=116 time=83.129 ms
+64 bytes from 172.217.160.238: seq=9 ttl=116 time=95.230 ms
+hkeeper@hkeeper-swan:~$ sudo docker stop 0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e 
+
+0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+
+
+hkeeper@hkeeper-swan:~$ sudo docker kill  0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+ 
+ 
