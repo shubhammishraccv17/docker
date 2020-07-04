@@ -1,0 +1,43 @@
+Docker override commands
+docker run <image name> command 
+here image name indicates the name of image you want to run and command indicate  the coomand you want to execute after image is in running state.
+
+examples 
+
+hkeeper@hkeeper-swan:~$ sudo docker run busybox echo "hi i am shubham"
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+91f30d776fb2: Pull complete 
+Digest: sha256:9ddee63a712cea977267342e8750ecbc60d3aab25f04ceacfa795e6fce341793
+Status: Downloaded newer image for busybox:latest
+hi i am shubham
+
+
+
+hkeeper@hkeeper-swan:~$ sudo docker run busybox ls
+bin
+dev
+etc
+home
+proc
+root
+sys
+tmp
+usr
+var
+
+
+
+
+
+Now something to notice 
+
+sudo docker run hello-world  ls
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "exec: \"ls\": executable file not found in $PATH": unknown.
+ERRO[0008] error waiting for container: context canceled 
+
+
+
+when  we run ls command with hello-world image we get a error bcoz  in busybox therewas program of ls in the image but not in hello-world hence it doesnt executed
+
+
