@@ -1,0 +1,35 @@
+docker logs <container id>
+
+
+hkeeper@hkeeper-swan:~$ sudo docker logs  0b54f8bf0e3faa812aa739dc113d58f04cbf5f961438dffe94cdb93b4d0eb58e
+PING google.com (172.217.160.238): 56 data bytes
+64 bytes from 172.217.160.238: seq=0 ttl=116 time=187.241 ms
+64 bytes from 172.217.160.238: seq=1 ttl=116 time=50.791 ms
+64 bytes from 172.217.160.238: seq=2 ttl=116 time=430.366 ms
+64 bytes from 172.217.160.238: seq=3 ttl=116 time=128.747 ms
+64 bytes from 172.217.160.238: seq=4 ttl=116 time=22.471 ms
+64 bytes from 172.217.160.238: seq=5 ttl=116 time=20.330 ms
+64 bytes from 172.217.160.238: seq=6 ttl=116 time=98.193 ms
+64 bytes from 172.217.160.238: seq=7 ttl=116 time=217.804 ms
+64 bytes from 172.217.160.238: seq=8 ttl=116 time=83.129 ms
+64 bytes from 172.217.160.238: seq=9 ttl=116 time=95.230 ms
+64 bytes from 172.217.160.238: seq=10 ttl=116 time=65.679 ms
+64 bytes from 172.217.160.238: seq=11 ttl=116 time=21.542 ms
+64 bytes from 172.217.160.238: seq=12 ttl=116 time=29.261 ms
+64 bytes from 172.217.160.238: seq=13 ttl=116 time=173.047 ms
+64 bytes from 172.217.160.238: seq=14 ttl=116 time=36.886 ms
+64 bytes from 172.217.160.238: seq=15 ttl=116 time=22.517 ms
+64 bytes from 172.217.160.238: seq=16 ttl=116 time=66.025 ms
+64 bytes from 172.217.160.238: seq=17 ttl=116 time=249.970 ms
+64 bytes from 172.217.160.238: seq=18 ttl=116 time=19.895 ms
+64 bytes from 172.217.160.238: seq=19 ttl=116 time=27.325 ms
+64 bytes from 172.217.160.238: seq=20 ttl=116 time=24.017 ms
+64 bytes from 172.217.160.238: seq=21 ttl=116 time=22.260 ms
+64 bytes from 172.217.160.238: seq=22 ttl=116 time=42.434 ms
+64 bytes from 172.217.160.238: seq=23 ttl=116 time=25.622 ms
+
+
+
+docker logs does'nt  means rerunning of containers these are just logs which are used for inspection purpose 
+
+
